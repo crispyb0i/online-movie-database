@@ -1,0 +1,75 @@
+form{
+  text-align: center;
+}
+
+form input{
+  height: 36px;
+  width: 70%;
+  font-size: 1.5em;
+  border-radius: 30px;
+  padding: 5px 20px;
+  margin-top: 80px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+#trending {
+  background-color: #32C093;
+  border-top: solid 3px;
+}
+
+#trendingMoviesContainer {
+  display: flex;
+  margin: 30px 0 5% 0;
+  overflow-x: scroll;
+  text-align: center;
+  width: 100%
+}
+
+#trending h2 {
+  font-size: 40px;
+  display: block;
+  margin: 10px 0 0 0px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#trendingMoviesContainer .movieDiv {
+
+}
+
+#movieContainer {
+  display: flex;
+  margin: 50px 10% 5% 10%;
+  flex-wrap: wrap;
+
+}
+.movieDiv img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 180px;
+  height: 280px;
+  overflow-wrap: break-word;
+  border-radius: 20px;
+}
+
+
+.movieDiv {
+  margin: 0 20px 30px 20px;
+  border: black;
+  text-align: center;
+}
+
+.movieDiv .movieTitle{
+  flex: 200px;
+  font-size: 18px;
+  margin: 10px 0 20px 0;
+  text-align: center;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  width: 10em;
+}
