@@ -9,6 +9,7 @@ function App() {
     <div className="wrapper">
       <Header/>
       <Search/>
+      <Movie/>
     </div>
   );
 }

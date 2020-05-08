@@ -14,7 +14,6 @@ class Search extends React.Component {
   }
 
   handleChange(event) {
-    console.log(document.getElementById("trending"))
     this.getMovies(document.getElementById("formValue").value)
   }
 
@@ -28,7 +27,6 @@ class Search extends React.Component {
       response.json()
         .then((data) => {
           let movies = data["results"]
-          console.log("HOLY",movies)
             this.setState({movies: movies}, (movies)=> this.renderMovies(movies))
         })
     })
@@ -40,7 +38,6 @@ class Search extends React.Component {
       response.json()
         .then((data) => {
           let trending = data["results"]
-          console.log("trending",trending)
             this.setState({trending:trending}, (trending)=> this.renderTrending(trending))
         })
     })
@@ -56,7 +53,7 @@ class Search extends React.Component {
         image = "https://image.tmdb.org/t/p/w500"+this.state.trending[i].poster_path;
       }
       moviesList.push(
-        <div className="movieDiv" id={i}>
+        <div className="movieDiv" id={this.state.trending[i].id}>
           <img src={image} className="moviePoster"/>
           <h1 className="movieTitle">{this.state.trending[i].title}</h1>
         </div>
@@ -77,7 +74,7 @@ class Search extends React.Component {
           image = "https://image.tmdb.org/t/p/w500"+this.state.movies[i].poster_path;
         }
         moviesList.push(
-          <div className="movieDiv" id={i}>
+          <div className="movieDiv" id={this.state.movies[i].id}>
             <img src={image} className="moviePoster"/>
             <h1 className="movieTitle">{this.state.movies[i].title}</h1>
           </div>
